@@ -3,7 +3,7 @@ from ultralytics import YOLO
 from PIL import Image
 
 st.set_page_config(
-    page_title="Clasificador de Dentición - Josue Pari",
+    page_title="Clasificador de Dentición",
     page_icon="🦙",
     layout="wide",
     initial_sidebar_state="expanded"
