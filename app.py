@@ -137,7 +137,7 @@ diccionario_edades = {
     "Diente de Leche Mayor": "Tui (Aprox. 1 a 2 años) - Dientes de leche con desgaste",
     "2 Dientes": "2.5 a 3 años - Primer par de incisivos permanentes",
     "4 Dientes": "3.5 a 4 años - Segundo par de incisivos permanentes",
-    "Boca Llena": "Más de 4.5 años - Todos los incisivos permanentes"
+    "Boca Llena": "4 años y medio a más - Todos los incisivos permanentes"
 }
 
 with st.sidebar:
