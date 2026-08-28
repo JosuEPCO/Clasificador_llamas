@@ -29,7 +29,7 @@ with st.sidebar:
     st.subheader("Instrucciones")
     st.write("1. Toma una fotografía clara de los incisivos.")
     st.write("2. Sube la imagen usando el panel principal.")
-    st.write("3. Presiona "Procesar Imagen".")
+    st.write("3. Presiona -Procesar Imagen-.")
     
     st.divider()
     
