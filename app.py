@@ -9,14 +9,15 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- DICCIONARIO DE EDADES ZOOTÉCNICAS ---
-# Nota: Puedes ajustar los textos entre comillas según los parámetros exactos de tu investigación
+# --- DICCIONARIO DE EDADES ZOOTÉCNICAS CORREGIDO ---
+# Las claves de la izquierda AHORA COINCIDEN EXACTAMENTE con los nombres 
+# de las carpetas de tu dataset para que el modelo las reconozca.
 diccionario_edades = {
-    "Diente de Leche menor": "Cría (Aprox. menor a 1 año) - Dientes de leche sin desgaste",
-    "Diente de Leche Mayor": "Tui (Aprox. 1 a 2 años) - Dientes de leche con desgaste",
-    "2 Dientes": "2.5 a 3 años - Primer par de incisivos permanentes",
-    "4 Dientes": "3.5 a 4 años - Segundo par de incisivos permanentes",
-    "Boca Llena": "Más de 4.5 años - Todos los incisivos permanentes"
+    "DL_menor": "Cría (Aprox. menor a 1 año) - Dientes de leche sin desgaste",
+    "DL_Mayor": "Tui (Aprox. 1 a 2 años) - Dientes de leche con desgaste",
+    "2D": "2.5 a 3 años - Primer par de incisivos permanentes",
+    "4D": "3.5 a 4 años - Segundo par de incisivos permanentes",
+    "BLL": "Más de 4.5 años - Todos los incisivos permanentes"
 }
 
 with st.sidebar:
@@ -74,8 +75,7 @@ if archivo_subido is not None:
                 clase_predicha = diccionario_nombres[indice_mejor_clase]
                 porcentaje_confianza = resultados[0].probs.top1conf.item() * 100
                 
-                # Buscamos la edad correspondiente en nuestro diccionario
-                # Usamos .get() por si el nombre de la clase devuelta por el modelo varía ligeramente
+                # Buscamos la edad correspondiente en nuestro diccionario corregido
                 edad_estimada = diccionario_edades.get(clase_predicha, "Edad no determinada")
                 
                 # Mostrar los resultados ampliados
