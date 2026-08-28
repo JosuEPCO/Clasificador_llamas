@@ -12,11 +12,11 @@ st.set_page_config(
 # --- DICCIONARIO DE EDADES ZOOTÉCNICAS ---
 # Nota: Puedes ajustar los textos entre comillas según los parámetros exactos de tu investigación
 diccionario_edades = {
-    "DL_menor": "Cría (Aprox. menor a 1 año) - Dientes de leche sin desgaste",
-    "DL_Mayor": "Tui (Aprox. 1 a 2 años) - Dientes de leche con desgaste",
-    "2D": "2.5 a 3 años - Primer par de incisivos permanentes",
-    "4D": "3.5 a 4 años - Segundo par de incisivos permanentes",
-    "BLL": "Más de 4.5 años (Boca Llena) - Todos los incisivos permanentes"
+    "Diente de Leche menor": "Cría (Aprox. menor a 1 año) - Dientes de leche sin desgaste",
+    "Diente de Leche Mayor": "Tui (Aprox. 1 a 2 años) - Dientes de leche con desgaste",
+    "2 Dientes": "2.5 a 3 años - Primer par de incisivos permanentes",
+    "4 Dientes": "3.5 a 4 años - Segundo par de incisivos permanentes",
+    "Boca Llena": "Más de 4.5 años - Todos los incisivos permanentes"
 }
 
 with st.sidebar:
@@ -29,7 +29,7 @@ with st.sidebar:
     st.subheader("Instrucciones")
     st.write("1. Toma una fotografía clara de los incisivos.")
     st.write("2. Sube la imagen usando el panel principal.")
-    st.write("3. Presiona 'Procesar Imagen'.")
+    st.write("3. Presiona "Procesar Imagen".")
     
     st.divider()
     
