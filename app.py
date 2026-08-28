@@ -3,7 +3,7 @@ from ultralytics import YOLO
 from PIL import Image
 
 st.set_page_config(
-    page_title="Clasificador de Dentición - Josué Pari",
+    page_title="Clasificador de Dentición - Josue Pari",
     page_icon="🦙",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -20,21 +20,21 @@ diccionario_edades = {
 }
 
 with st.sidebar:
-    st.title("🦙 Sobre el Proyecto")
+    st.title("Sobre el Proyecto")
     st.write(
         "Esta herramienta de visión computacional automatiza la evaluación de la "
         "cronología dentaria en llamas, optimizando el diagnóstico de edad en campo."
     )
     
-    st.subheader("📋 Instrucciones")
+    st.subheader("Instrucciones")
     st.write("1. Toma una fotografía clara de los incisivos.")
     st.write("2. Sube la imagen usando el panel principal.")
     st.write("3. Presiona 'Procesar Imagen'.")
     
     st.divider()
     
-    st.subheader("👨‍🔬 Investigación y Desarrollo")
-    st.write("**Investigador:** Josué Pari")
+    st.subheader("Investigación y Desarrollo")
+    st.write("**Investigador:** Josue Pari")
     st.write("**Contacto:** jjosuepco@gmail.com")
     st.caption("Desarrollado para la investigación en Zootecnia y Producción Animal.")
 
@@ -48,7 +48,7 @@ def cargar_modelo():
 try:
     modelo = cargar_modelo()
 except Exception as e:
-    st.error("⚠️ Error: No se encontró el archivo 'best.pt' en el directorio.")
+    st.error("Error: No se encontró el archivo 'best.pt' en el directorio.")
     st.stop()
 
 archivo_subido = st.file_uploader("Selecciona o arrastra la fotografía aquí (JPG, PNG)", type=["jpg", "jpeg", "png"])
@@ -79,8 +79,8 @@ if archivo_subido is not None:
                 edad_estimada = diccionario_edades.get(clase_predicha, "Edad no determinada")
                 
                 # Mostrar los resultados ampliados
-                st.success(f"### 🦷 Etapa Dentaria: {clase_predicha}")
-                st.info(f"### ⏱️ Edad Estimada: {edad_estimada}")
+                st.success(f"### Etapa Dentaria: {clase_predicha}")
+                st.info(f"### Edad Estimada: {edad_estimada}")
                 st.write(f"**Nivel de Confianza de la Red Neuronal:** {porcentaje_confianza:.2f}%")
                 
                 st.divider()
