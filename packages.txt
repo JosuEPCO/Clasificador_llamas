@@ -1,6 +1,0 @@
-libgl1
-libglib2.0-0
-streamlit
-ultralytics
-pillow
-opencv-python-headless==4.8.0.74
