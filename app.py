@@ -4,14 +4,10 @@ from PIL import Image
 
 st.set_page_config(
     page_title="Clasificador de Dentición",
-    page_icon="🦙",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# =========================================================
-# --- TEMA VISUAL: PASTEL AZULADO ---
-# =========================================================
 st.markdown("""
 <style>
     /* Fondo general */
@@ -128,7 +124,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --- TRADUCTOR INTERNO ---
 mapa_nombres = {
     "DL_menor": "Diente de Leche menor",
     "DL_Mayor": "Diente de Leche Mayor",
@@ -137,7 +132,6 @@ mapa_nombres = {
     "BLL": "Boca Llena"
 }
 
-# --- DICCIONARIO DE EDADES ZOOTÉCNICAS ---
 diccionario_edades = {
     "Diente de Leche menor": "Cría (Aprox. menor a 1 año) - Dientes de leche sin desgaste",
     "Diente de Leche Mayor": "Tui (Aprox. 1 a 2 años) - Dientes de leche con desgaste",
@@ -147,25 +141,25 @@ diccionario_edades = {
 }
 
 with st.sidebar:
-    st.title("🦙 Sobre el Proyecto")
+    st.title("Sobre el Proyecto")
     st.write(
         "Esta herramienta de visión computacional automatiza la evaluación de la "
         "cronología dentaria en llamas, optimizando el diagnóstico de edad en campo."
     )
 
-    st.subheader("📋 Instrucciones")
+    st.subheader("Instrucciones")
     st.write("1️⃣ Toma una fotografía clara de los incisivos.")
     st.write("2️⃣ Sube la imagen usando el panel principal.")
     st.write("3️⃣ Presiona **Procesar Imagen**.")
 
     st.divider()
 
-    st.subheader("🔬 Investigación y Desarrollo")
+    st.subheader("Investigación y Desarrollo")
     st.write("**Investigador:** Josue Pari - Zaid Alonso")
     st.write("**Contacto:** jjosuepco@gmail.com")
     st.caption("Desarrollado para la investigación en Producción Animal - UNA-PUNO.")
 
-st.title("🦙 Clasificador Automatizado de Dentición en Llamas")
+st.title("Clasificador Automatizado de Dentición en Llamas")
 st.markdown("Clasifica imágenes fotográficas en cinco etapas zootécnicas y estima la edad aproximada del animal.")
 
 @st.cache_resource
@@ -186,11 +180,11 @@ if archivo_subido is not None:
     imagen = Image.open(archivo_subido)
 
     with col_imagen:
-        st.subheader("📷 Fotografía Ingresada")
+        st.subheader("Fotografía Ingresada")
         st.image(imagen, use_container_width=True, caption="Imagen lista para el análisis")
 
     with col_resultados:
-        st.subheader("🩺 Diagnóstico del Modelo")
+        st.subheader("Diagnóstico del Modelo")
 
         if st.button("Procesar Imagen", type="primary", use_container_width=True):
             with st.spinner("Analizando características morfológicas..."):
@@ -211,7 +205,7 @@ if archivo_subido is not None:
                 st.write(f"**Nivel de Confianza de la Red Neuronal:** {porcentaje_confianza:.2f}%")
 
                 st.divider()
-                st.markdown("#### 📊 Distribución de Probabilidades:")
+                st.markdown("#### Distribución de Probabilidades:")
                 probabilidades = resultados[0].probs.data.tolist()
 
                 for i, prob in enumerate(probabilidades):
