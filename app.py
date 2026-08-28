@@ -16,13 +16,13 @@ st.markdown("""
 <style>
     /* Fondo general */
     .stApp {
-        background: linear-gradient(180deg, #eaf3fb 0%, #dceefb 100%);
+        background: linear-gradient(180deg, #d3e7f7 0%, #bfdcf2 100%);
     }
 
     /* Sidebar */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #cfe6f7 0%, #bcdcf2 100%);
-        border-right: 1px solid #a9cfe8;
+        background: linear-gradient(180deg, #b7d9ef 0%, #a3cce8 100%);
+        border-right: 1px solid #8fbfe0;
     }
     section[data-testid="stSidebar"] * {
         color: #1f3b57 !important;
@@ -41,11 +41,11 @@ st.markdown("""
 
     /* Contenedor de columnas tipo tarjeta */
     div[data-testid="column"] {
-        background-color: #ffffffb3;
+        background-color: #eaf5fdcc;
         border-radius: 16px;
         padding: 20px;
-        box-shadow: 0 4px 14px rgba(90, 140, 180, 0.15);
-        border: 1px solid #cfe4f5;
+        box-shadow: 0 4px 14px rgba(60, 110, 150, 0.2);
+        border: 1px solid #9fc9e8;
     }
 
     /* Botón principal */
@@ -66,28 +66,31 @@ st.markdown("""
     }
 
     /* File uploader */
-    div[data-testid="stFileUploaderDropzone"] {
-        background-color: #eef7fd !important;
-        border: 2px dashed #8fc1e8 !important;
-        border-radius: 14px;
+    [data-testid="stFileUploader"] section,
+    [data-testid="stFileUploaderDropzone"],
+    [data-testid="stFileUploaderDropzone"] > div,
+    [data-testid="stFileUploaderDropzoneInstructions"] {
+        background-color: #a9d1ec !important;
+        border: 2px dashed #6fabd8 !important;
+        border-radius: 14px !important;
     }
-    div[data-testid="stFileUploaderDropzone"] * {
-        color: #2c5c8a !important;
+    [data-testid="stFileUploader"] * {
+        color: #1f3b57 !important;
     }
-    div[data-testid="stFileUploaderDropzoneInstructions"] svg {
-        fill: #5a9bd4 !important;
+    [data-testid="stFileUploaderDropzoneInstructions"] svg {
+        fill: #2c5c8a !important;
     }
-    section[data-testid="stFileUploaderDropzone"] button,
-    div[data-testid="stFileUploaderDropzone"] button {
+    [data-testid="stFileUploader"] button,
+    [data-testid="stBaseButton-secondary"] {
         background-color: #ffffff !important;
         color: #2c5c8a !important;
-        border: 1px solid #8fc1e8 !important;
+        border: 1px solid #6fabd8 !important;
         border-radius: 8px !important;
     }
 
     /* Header superior */
     header[data-testid="stHeader"] {
-        background-color: #eaf3fb !important;
+        background-color: #d3e7f7 !important;
     }
     header[data-testid="stHeader"] * {
         color: #2c5c8a !important;
@@ -158,9 +161,9 @@ with st.sidebar:
     st.divider()
 
     st.subheader("🔬 Investigación y Desarrollo")
-    st.write("**Investigador:** Josue Pari")
+    st.write("**Investigador:** Josue Pari - Zaid Alonso")
     st.write("**Contacto:** jjosuepco@gmail.com")
-    st.caption("Desarrollado para la investigación en Zootecnia y Producción Animal.")
+    st.caption("Desarrollado para la investigación en Producción Animal - UNA-PUNO.")
 
 st.title("🦙 Clasificador Automatizado de Dentición en Llamas")
 st.markdown("Clasifica imágenes fotográficas en cinco etapas zootécnicas y estima la edad aproximada del animal.")
