@@ -67,9 +67,36 @@ st.markdown("""
 
     /* File uploader */
     div[data-testid="stFileUploaderDropzone"] {
-        background-color: #eef7fd;
-        border: 2px dashed #8fc1e8;
+        background-color: #eef7fd !important;
+        border: 2px dashed #8fc1e8 !important;
         border-radius: 14px;
+    }
+    div[data-testid="stFileUploaderDropzone"] * {
+        color: #2c5c8a !important;
+    }
+    div[data-testid="stFileUploaderDropzoneInstructions"] svg {
+        fill: #5a9bd4 !important;
+    }
+    section[data-testid="stFileUploaderDropzone"] button,
+    div[data-testid="stFileUploaderDropzone"] button {
+        background-color: #ffffff !important;
+        color: #2c5c8a !important;
+        border: 1px solid #8fc1e8 !important;
+        border-radius: 8px !important;
+    }
+
+    /* Header superior */
+    header[data-testid="stHeader"] {
+        background-color: #eaf3fb !important;
+    }
+    header[data-testid="stHeader"] * {
+        color: #2c5c8a !important;
+        fill: #2c5c8a !important;
+    }
+
+    /* Barra inferior "Manage app" y otros overlays oscuros del entorno */
+    [data-testid="stToolbar"], [data-testid="stDecoration"] {
+        background-color: transparent !important;
     }
 
     /* Mensajes success / info */
