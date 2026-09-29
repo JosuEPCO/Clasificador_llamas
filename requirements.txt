@@ -2,3 +2,5 @@ streamlit
 ultralytics
 pillow
 opencv-python-headless
+torch
+torchvision
