@@ -494,7 +494,7 @@ mostrar_html(f"""
 # Modelo
 # ---------------------------------------------------------------------------
 
-RUTA_MODELO = Path(__file__).parent / "modelo" / "best.pt"
+RUTA_MODELO = Path(__file__).parent / "best.pt"
 
 @st.cache_resource
 def cargar_modelo():
